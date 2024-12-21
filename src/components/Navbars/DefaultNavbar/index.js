@@ -87,7 +87,9 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
             <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
+              <ScrollLink to='home' smooth={true} duration={500} onClick={() => handleSectionChange('home')}>
+                {brand}
+              </ScrollLink>
             </MKTypography>
           </MKBox>
           <MKBox
